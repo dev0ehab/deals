@@ -1,0 +1,13 @@
+{
+    "name": "RestrictedAreas",
+    "alias": "RestrictedAreas",
+    "description": "",
+    "keywords": [],
+    "priority": 0,
+    "providers": [
+        "Modules\\RestrictedAreas\\Providers\\RestrictedAreasServiceProvider"
+    ],
+    "aliases": {},
+    "files": [],
+    "requires": []
+}

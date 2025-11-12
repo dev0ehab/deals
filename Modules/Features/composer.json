@@ -1,0 +1,23 @@
+{
+    "name": "ibrahimelmonier/features",
+    "description": "",
+    "authors": [
+        {
+            "name": "Ibrahim El-Monier",
+            "email": "elmonieribrahim@gmail.com"
+        }
+    ],
+    "extra": {
+        "laravel": {
+            "providers": [],
+            "aliases": {
+
+            }
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "Modules\\Features\\": ""
+        }
+    }
+}

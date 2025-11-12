@@ -1,0 +1,25 @@
+{
+    "name": "karimosama/orders",
+    "type": "laravel-module",
+    "description": "",
+    "authors": [
+        {
+            "name": "Karim Osama",
+            "email": "karimosama1041997@gmail.com"
+        }
+    ],
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Modules\\Orders\\Providers\\OrdersServiceProvider"
+            ],
+            "aliases": {
+            }
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "Modules\\Orders\\": ""
+        }
+    }
+}

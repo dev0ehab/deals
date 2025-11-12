@@ -1,0 +1,67 @@
+<?php
+
+return [
+    'plural' => 'Admins',
+    'singular' => 'Admin',
+    'empty' => 'There are no admins',
+    'select' => 'Select Admin',
+    'perPage' => 'Count Results Per Page',
+    'filter' => 'Search for admin',
+    'my_profile' => 'My Profile',
+    'impersonate' => [
+        'leave' => 'Back To Previous Account',
+    ],
+    'actions' => [
+        'list' => 'List Admins',
+        'show' => 'Show Admin',
+        'create' => 'Create admin',
+        'new' => 'New',
+        'edit' => 'Edit Admin',
+        'delete' => 'Delete Admin',
+        'save' => 'Save',
+        'filter' => 'Filter',
+        'block' => 'Block Admin',
+        'unblock' => 'Unblock Admin',
+    ],
+    'messages' => [
+        'created' => 'The admin has been created successfully.',
+        'updated' => 'The admin has been updated successfully.',
+        'deleted' => 'The admin has been deleted successfully.',
+        'blocked' => 'The admin has been blocked successfully.',
+        'unblocked' => 'The admin has been unblocked successfully.',
+        'images_note' => 'Supported types: jpeg, png,jpg | Max File Size:10MB',
+    ],
+    'attributes' => [
+        'name' => 'Name',
+        'phone' => 'Phone',
+        'email' => 'Email',
+        'created_at' => 'The Date Of Join',
+        'old_password' => 'Old Password',
+        'password' => 'Password',
+        'password_confirmation' => 'Password Confirmation',
+        'type' => 'User Type',
+        'avatar' => 'Avatar',
+        'verified' => 'Verified',
+        'verified_at' => 'Verified at',
+    ],
+    'dialogs' => [
+        'delete' => [
+            'title' => 'Warning !',
+            'info' => 'Are you sure you want to delete the admin ?',
+            'confirm' => 'Delete',
+            'cancel' => 'Cancel',
+        ],
+        'block' => [
+            'title' => 'Warning !',
+            'info' => 'Are you sure you want to block the admin ?',
+            'confirm' => 'Block',
+            'cancel' => 'Cancel',
+        ],
+        'unblock' => [
+            'title' => 'Warning !',
+            'info' => 'Are you sure you want to unblock the admin ?',
+            'confirm' => 'Unblock',
+            'cancel' => 'Cancel',
+        ],
+    ],
+];

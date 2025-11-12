@@ -1,0 +1,185 @@
+body {
+  direction: ltr;
+}
+
+/* start navbar */
+.blurOverlay {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  border-top-left-radius: 32px;
+  border-bottom-left-radius: 32px;
+  left: 83% !important;
+}
+.slideRight .custom-link{
+  transform : translateX(20px);
+}
+nav .navbar-nav-icons .notification-menu{
+  right:auto !important;
+  left:-180px !important;
+}
+nav .navbar-nav-icons .notification-menu li:first-child a{
+  border-top-right-radius: 0px;
+  border-top-left-radius: 0px;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+nav .navbar-nav-icons .notification-menu li:last-child a
+{  
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+.side-navbar-content .side-nav-notifications .notification-menu{
+  right: auto !important;
+  left: 0 !important;
+}
+/* end navbar */
+
+/* start forms pages */
+.forms .form-body .date .date-span-parent{
+  left: auto;
+  right: 10px;
+}
+.forms .form-body .input-box i,
+.forms .form-body .input-box a ,
+.change-password form .input-box i,
+.change-password form .input-box a{
+  left: auto;
+  right: 15px;
+}
+.forms .register-form .input-box i ,
+.forms .form-body .input-box a ,
+.change-password form .input-box i,
+.change-password form .input-box a{
+  left: auto;
+  right: 25px;
+}
+.register .register-form .cam {
+  left: auto;
+  right: -10px;
+}
+/* end forms page */
+
+/* start create-order-form */
+.create-order .create-order-form  .dselect-items{
+  text-align: left;
+}
+/* end create-order */
+
+/* start products */
+.products .product-item .img-overlay .sale {
+  left: auto;
+  right: 10px;
+}
+.products .product-item .img-overlay .product-options {
+  right: auto;
+  left: 0;
+}
+.products .product-item .img-overlay .product-options .heart-icon {
+  right: auto; 
+  left: 85%; 
+}
+.products .product-item .img-overlay .product-options .share-icon {
+  left: auto;
+  right: 85%;
+}
+.products button.owl-prev {
+  right: auto;
+  left: -55px;
+}
+.products button.owl-next {
+  left: auto;
+  left: -55px;
+}
+/* end products */
+
+/* start filter sidebar */
+.filter-sidebar #sidebar.active {
+  margin-left: 0;
+  margin-right: -450px;
+}
+.filter-sidebar .accordion-button::after {
+  margin-right: inherit;
+  margin-left: auto;
+}
+.form-check .form-check-input{
+  float: left;
+  margin-left: 0;
+  margin-right: 10px;
+}
+@media (max-width: 768px) {
+  #sidebar.active {
+    margin-right: 0;
+  }
+  #sidebar {
+    margin-left: 0;
+    margin-right: -250px;
+  }
+  #sidebarCollapse span {
+    margin-left: 0;
+    margin-right: 5px;
+  }
+}
+/* end filter sidebar */
+
+/* start order-details */
+.order-details .carousel-item .carousel-caption{
+  left: inherit;
+  right: 0;
+  border-top-right-radius: 0;
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 16px;
+  border-bottom-right-radius: 16px;
+}
+.addition-details .comments .send-comment .comment .cam{
+  left: auto;
+  right: 20px;
+}
+/* end order-details */
+
+/* start my orders */
+.my-orders .nav-pills .nav-item:first-child button{
+  border-top-right-radius: 0;
+  border-top-left-radius: 16px;
+}
+.my-orders .nav-pills .nav-item:last-child button{
+  border-top-left-radius: 0;
+  border-top-right-radius: 16px;
+}
+/* end my orders */
+
+/* start profile */
+@media (max-width:772px) {
+  .profile .user-details .edit{
+    left: auto;
+    right: -32px;
+  }
+}
+/* end profile */
+
+/* start blog-details */
+.blog-details .blog-header p{
+  left: auto;
+  right: 25px;
+}
+/* end blog-details */
+
+/* start messages */
+.messages .search button{
+  left: auto;
+  right: 35px;
+}
+.messages .message-body .tab-content .write-message .input-send-message button,
+.messages .message-body .tab-content .write-message .input-send-message .cam{
+  left: auto;
+  right: 15px;
+}
+.messages .message-body .tab-content .write-message .input-send-message button.mice{
+  left: auto;
+  right: 45px;
+}
+.messages .sender-msg p ,.messages .messenger-msg  p{
+  text-align: left;
+}
+/* end messages */

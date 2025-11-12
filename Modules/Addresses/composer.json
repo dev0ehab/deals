@@ -1,0 +1,29 @@
+{
+    "name": "karimosama/addresses",
+    "type": "laravel-module",
+    "description": "",
+    "authors": [
+        {
+            "name": "Karim Osama",
+            "email": "karimosama1041997@gmail.com"
+        }
+    ],
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Modules\\Addresses\\Providers\\AddressesServiceProvider"
+            ],
+            "aliases": {
+            }
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "Modules\\Countries\\": ""
+        },
+        "classmap": [
+            "Database/Seeders",
+            "Database/factories"
+        ]
+    }
+}

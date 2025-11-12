@@ -1,0 +1,23 @@
+{
+    "name": "karimosama/partners",
+    "description": "",
+    "authors": [
+        {
+            "name": "Karim Osama",
+            "email": "karimosama1041997@gmail.com"
+        }
+    ],
+    "extra": {
+        "laravel": {
+            "providers": [],
+            "aliases": {
+
+            }
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "Modules\\Services\\": ""
+        }
+    }
+}

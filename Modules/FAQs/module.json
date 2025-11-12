@@ -1,0 +1,13 @@
+{
+    "name": "FAQs",
+    "alias": "FAQs",
+    "description": "",
+    "keywords": [],
+    "priority": 0,
+    "providers": [
+        "Modules\\FAQs\\Providers\\FAQsServiceProvider"
+    ],
+    "aliases": {},
+    "files": [],
+    "requires": []
+}

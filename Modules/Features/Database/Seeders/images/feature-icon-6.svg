@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="67" height="67" viewBox="0 0 67 67">
+  <g id="Group_41" data-name="Group 41" transform="translate(-1 -1)">
+    <rect id="Rectangle_112" data-name="Rectangle 112" width="67" height="67" rx="3" transform="translate(1 1)" fill="#b2b2b2"/>
+    <path id="Path_331" data-name="Path 331" d="M68,14.4V7.7A6.7,6.7,0,0,0,61.3,1H7.7A6.7,6.7,0,0,0,1,7.7v6.7Z" transform="translate(0)"/>
+    <path id="Path_332" data-name="Path 332" d="M27.85,7.467H26.733a2.233,2.233,0,0,1,0-4.467H27.85a2.233,2.233,0,0,1,0,4.467Z" transform="translate(28.983 2.467)" fill="#b2b2b2"/>
+    <path id="Path_333" data-name="Path 333" d="M23.85,7.467H22.733a2.233,2.233,0,0,1,0-4.467H23.85a2.233,2.233,0,0,1,0,4.467Z" transform="translate(24.05 2.467)" fill="#b2b2b2"/>
+    <path id="Path_334" data-name="Path 334" d="M11.7,36.333H7.233a2.233,2.233,0,1,1,0-4.467H11.7a2.233,2.233,0,0,0,0-4.467,6.7,6.7,0,0,1,0-13.4h4.467a2.233,2.233,0,1,1,0,4.467H11.7a2.233,2.233,0,0,0,0,4.467,6.7,6.7,0,1,1,0,13.4Z" transform="translate(4.933 16.033)"/>
+    <path id="Path_335" data-name="Path 335" d="M15.233,36.333A2.233,2.233,0,0,1,13,34.1V16.233a2.233,2.233,0,0,1,4.467,0V34.1A2.233,2.233,0,0,1,15.233,36.333Z" transform="translate(14.8 16.033)"/>
+    <path id="Path_336" data-name="Path 336" d="M23.957,18.467H15.4A2.233,2.233,0,0,1,15.4,14h8.554a2.233,2.233,0,0,1,0,4.467Z" transform="translate(15.01 16.033)"/>
+    <path id="Path_337" data-name="Path 337" d="M23.957,22.467H15.4A2.233,2.233,0,0,1,15.4,18h8.554a2.233,2.233,0,0,1,0,4.467Z" transform="translate(15.01 20.967)"/>
+    <path id="Path_338" data-name="Path 338" d="M23.957,26.467H15.4A2.233,2.233,0,1,1,15.4,22h8.554a2.233,2.233,0,1,1,0,4.467Z" transform="translate(15.01 25.9)"/>
+    <path id="Path_339" data-name="Path 339" d="M27.7,36.333a6.7,6.7,0,0,1-6.7-6.7V20.7a6.7,6.7,0,1,1,13.4,0v8.933A6.7,6.7,0,0,1,27.7,36.333Zm0-17.867A2.233,2.233,0,0,0,25.467,20.7v8.933a2.233,2.233,0,1,0,4.467,0V20.7A2.233,2.233,0,0,0,27.7,18.467Z" transform="translate(24.667 16.033)"/>
+  </g>
+</svg>

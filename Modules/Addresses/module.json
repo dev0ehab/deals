@@ -1,0 +1,13 @@
+{
+    "name": "Addresses",
+    "alias": "addresses",
+    "description": "",
+    "keywords": [],
+    "order": 0,
+    "providers": [
+        "Modules\\Addresses\\Providers\\AddressesServiceProvider"
+    ],
+    "aliases": {},
+    "files": [],
+    "requires": []
+}

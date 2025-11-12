@@ -1,0 +1,32 @@
+{
+    "name": "karimosama/accounts",
+    "type": "laravel-module",
+    "description": "",
+    "authors": [
+        {
+            "name": "Karim Osama",
+            "email": "karimosama1041997@gmail.com"
+        }
+    ],
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Modules\\Accounts\\Providers\\AccountsServiceProvider"
+            ],
+            "aliases": {
+            }
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "Modules\\Accounts\\": ""
+        },
+        "classmap": [
+            "Database/Seeders",
+            "Database/factories"
+        ],
+        "files": [
+            "Support/helpers.php"
+        ]
+    }
+}

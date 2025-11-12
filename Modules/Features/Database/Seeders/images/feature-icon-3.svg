@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="69" height="68.912" viewBox="0 0 69 68.912">
+  <g id="Server_Lock" data-name="Server Lock" transform="translate(-1.912 -2)">
+    <path id="Path_320" data-name="Path 320" d="M63.529,2H9.383A7.383,7.383,0,0,0,2,9.383v9.845a2.461,2.461,0,0,0,2.461,2.461h63.99a2.461,2.461,0,0,0,2.461-2.461V9.383A7.383,7.383,0,0,0,63.529,2Z" transform="translate(0 0)" fill="#d8e1ef"/>
+    <rect id="Rectangle_109" data-name="Rectangle 109" width="69" height="19" rx="1" transform="translate(1.912 26.912)" fill="#d8e1ef"/>
+    <path id="Path_321" data-name="Path 321" d="M58.607,22H4.461A2.461,2.461,0,0,0,2,24.461v9.845a7.383,7.383,0,0,0,7.383,7.383H58.607a2.461,2.461,0,0,0,2.461-2.461V24.461A2.461,2.461,0,0,0,58.607,22Z" transform="translate(0 29.223)" fill="#d8e1ef"/>
+    <path id="Path_322" data-name="Path 322" d="M18.306,19.922H8.461a2.461,2.461,0,1,1,0-4.922h9.845a2.461,2.461,0,0,1,0,4.922Z" transform="translate(5.845 18.995)" fill="#0593ff"/>
+    <path id="Path_323" data-name="Path 323" d="M18.306,9.922H8.461A2.461,2.461,0,1,1,8.461,5h9.845a2.461,2.461,0,1,1,0,4.922Z" transform="translate(5.845 4.383)" fill="#0593ff"/>
+    <path id="Path_324" data-name="Path 324" d="M18.306,29.922H8.461a2.461,2.461,0,1,1,0-4.922h9.845a2.461,2.461,0,0,1,0,4.922Z" transform="translate(5.845 33.607)" fill="#0593ff"/>
+    <path id="Path_325" data-name="Path 325" d="M36.228,28.228H21.461A2.461,2.461,0,0,1,19,25.767V20.845a9.845,9.845,0,0,1,19.689,0v4.922A2.461,2.461,0,0,1,36.228,28.228ZM23.922,23.306h9.845V20.845a4.922,4.922,0,0,0-9.845,0Z" transform="translate(24.84 13.15)" fill="#0e6ae0"/>
+    <rect id="Rectangle_110" data-name="Rectangle 110" width="34" height="34" rx="3" transform="translate(36.912 36.912)" fill="#0593ff"/>
+    <path id="Path_326" data-name="Path 326" d="M30.845,24.94a4.922,4.922,0,1,0-7.383,4.233v3.15a2.461,2.461,0,1,0,4.922,0v-3.15A4.922,4.922,0,0,0,30.845,24.94Z" transform="translate(27.762 26.283)" fill="#0e6ae0"/>
+  </g>
+</svg>

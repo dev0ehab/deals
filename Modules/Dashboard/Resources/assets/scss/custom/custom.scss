@@ -1,0 +1,12 @@
+.item {
+    border: 1px solid rgb(211, 210, 214);
+    box-shadow: 3px 1px rgb(211, 210, 214);
+    border-radius: 10px;
+}
+
+// fix selectpicker check icon alignment
+html[dir="rtl"] .bootstrap-select .bs-ok-default:after {
+    border-width: 0 0.26em 0.26em 0 !important;
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1) rotate(45deg);
+}

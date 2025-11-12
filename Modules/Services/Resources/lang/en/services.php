@@ -1,0 +1,66 @@
+<?php
+
+return [
+    'singular' => 'Service',
+    'plural'   => 'Services',
+    'empty'    => 'There are no Services yet.',
+    'count'    => 'Services count',
+    'search'   => 'Search',
+    'select'   => 'Select Service',
+    'perPage'  => 'Services Per Page',
+    'filter'   => 'Search for Service',
+    'actions'  => [
+        'main'      => 'Main Services',
+        'main_page' => 'Main Page',
+        'sub'       => 'Sub Services',
+        'order'     => 'Order The Services',
+        'list'      => 'List all',
+        'create'    => 'Create Service',
+        'show'      => 'Show Service',
+        'edit'      => 'Edit Service',
+        'delete'    => 'Delete Service',
+        'options'   => 'Options',
+        'save'      => 'Save',
+        'filter'    => 'Filter',
+    ],
+    'messages' => [
+        'created'                    => 'The Service has been created successfully.',
+        'updated'                    => 'The Service has been updated successfully.',
+        'washer-service-cant-delete' => 'The Service Can\'t Be Deleted becasue there are Pending orders.',
+        'cant-delete'                => "The Service Can't Be Deleted becasue it's Used by some Vendors",
+        'deleted'                    => 'The Service has been deleted successfully.',
+        'images_note'                => 'Supported types: jpeg, png,jpg | Max File Size:10MB',
+        'ordered'                    => 'The Services have been ordered successfully.',
+    ],
+    'attributes' => [
+        'name'                       => 'Service Name',
+        'title'                      => 'Service Title',
+        'description'                => 'Service Description',
+        'image'                      => 'Service Image',
+        'washer_id'                  => 'Washer',
+        'max_free_additions'         => 'Maximum Free Additions',
+        'sizes'                      => 'Sizes',
+        'price'                      => 'Price',
+        'has_express'                => 'Has Express Service',
+        'readyToWearUpperCollection' => 'Upper Collection',
+        'readyToWearLowerCollection' => 'Lower Collection',
+        'cover'                      => 'Cover',
+        'images'                     => 'Images',
+        ''                           => '',
+        ''                           => '',
+        ''                           => '',
+    ],
+    'dialogs' => [
+        'delete' => [
+            'title'   => 'Warning !',
+            'info'    => 'Are you sure you want to delete the Service ?',
+            'confirm' => 'Delete',
+            'cancel'  => 'Cancel',
+        ],
+    ],
+
+    'services'=>[
+        'shipping'      => 'Shipping & Delivery',
+        'attachCompany' => 'Attach Company',
+    ]
+];
