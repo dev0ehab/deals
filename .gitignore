@@ -20,3 +20,7 @@ yarn-error.log
 /.history
 .php_cs.cache
 .htaccess
+
+# Firebase service account keys (contain secrets)
+/public/dragon.json
+/public/firebase.json
