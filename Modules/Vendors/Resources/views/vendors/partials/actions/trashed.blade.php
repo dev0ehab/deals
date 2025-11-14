@@ -2,7 +2,7 @@
     <a href="{{ route('dashboard.vendors.trashed') }}"
        class="btn btn-danger font-weight-bolder">
         <i class="fas fa-trash-alt"></i>
-        @lang('vendors::vendorss.actions.trashed')
+        @lang('vendors::vendors.actions.trashed')
     </a>
 @else
     <button
@@ -10,6 +10,6 @@
         disabled
         class="btn btn-danger font-weight-bolder">
         <i class="fas fa-trash-alt"></i>
-        @lang('vendors::vendorss.actions.trashed')
+        @lang('vendors::vendors.actions.trashed')
     </button>
 @endif

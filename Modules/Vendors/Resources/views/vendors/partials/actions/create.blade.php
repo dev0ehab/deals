@@ -2,7 +2,7 @@
     <a href="{{ route('dashboard.vendors.create') }}"
        class="btn btn-primary font-weight-bolder">
         <i class="fas fa fa-fw fa-plus"></i>
-        @lang('vendors::vendorss.actions.create')
+        @lang('vendors::vendors.actions.create')
     </a>
 @else
     <button
@@ -10,6 +10,6 @@
         disabled
         class="btn btn-primary font-weight-bolder">
         <i class="fas fa fa-fw fa-plus"></i>
-        @lang('vendors::vendorss.actions.create')
+        @lang('vendors::vendors.actions.create')
     </button>
 @endif

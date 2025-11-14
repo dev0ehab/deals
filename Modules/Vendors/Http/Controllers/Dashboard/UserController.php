@@ -51,7 +51,7 @@ class UserController extends Controller
     public function index()
     {
         $vendors = $this->repository->all();
-        return view('vendors::vendorss.index', get_defined_vars());
+        return view('vendors::vendors.index', get_defined_vars());
     }
 
     /**
@@ -61,7 +61,7 @@ class UserController extends Controller
      */
     public function create()
     {
-        return view('vendors::vendorss.create');
+        return view('vendors::vendors.create');
     }
 
     /**
@@ -90,7 +90,7 @@ class UserController extends Controller
     {
         $vendor = $this->repository->find($vendor);
 
-        return view('vendors::vendorss.show', compact('vendor'));
+        return view('vendors::vendors.show', compact('vendor'));
     }
 
     /**
@@ -103,7 +103,7 @@ class UserController extends Controller
     {
         $vendor = $this->repository->find($vendor);
 
-        return view('vendors::vendorss.edit', compact('vendor'));
+        return view('vendors::vendors.edit', compact('vendor'));
     }
 
     /**
@@ -181,7 +181,7 @@ class UserController extends Controller
     public function trashed()
     {
         $vendors = $this->repository->trashed();
-        return view('vendors::vendorss.trashed', compact('vendors'));
+        return view('vendors::vendors.trashed', compact('vendors'));
     }
 
     /**

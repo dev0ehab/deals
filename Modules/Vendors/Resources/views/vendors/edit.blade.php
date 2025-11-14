@@ -11,12 +11,12 @@
 
         {{ BsForm::resource('vendors::vendorss')->putModel($vendor, route('dashboard.vendors.update', $vendor), ['files' => true,'data-parsley-validate']) }}
         @component('dashboard::layouts.components.box')
-            @slot('title', trans('vendors::vendorss.actions.edit'))
+            @slot('title', trans('vendors::vendors.actions.edit'))
 
-            @include('vendors::vendorss.partials.form')
+            @include('vendors::vendors.partials.form')
 
             @slot('footer')
-                {{ BsForm::submit()->label(trans('vendors::vendorss.actions.save')) }}
+                {{ BsForm::submit()->label(trans('vendors::vendors.actions.save')) }}
             @endslot
         @endcomponent
         {{ BsForm::close() }}

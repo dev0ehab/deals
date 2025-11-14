@@ -147,7 +147,7 @@ class ProfileController extends Controller
         $vendor = $request->user();
 
         if (!Hash::check($request->password, $vendor->password)) {
-            return $this->sendError(trans('vendors::vendorss.messages.password'));
+            return $this->sendError(trans('vendors::vendors.messages.password'));
         }
 
         $vendor->forceDelete();

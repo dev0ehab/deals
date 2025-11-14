@@ -1,22 +1,22 @@
 @extends('dashboard::layouts.default')
 
 @section('title')
-    @lang('vendors::vendorss.actions.create')
+    @lang('vendors::vendors.actions.create')
 @endsection
 
 @section('content')
     @component('dashboard::layouts.components.page')
-        @slot('title', trans('vendors::vendorss.plural'))
+        @slot('title', trans('vendors::vendors.plural'))
         @slot('breadcrumbs', ['dashboard.vendors.create'])
 
         {{ BsForm::resource('vendors::vendorss')->post(route('dashboard.vendors.store'), ['files' => true,'data-parsley-validate']) }}
         @component('dashboard::layouts.components.box')
-            @slot('title', trans('vendors::vendorss.actions.create'))
+            @slot('title', trans('vendors::vendors.actions.create'))
 
-            @include('vendors::vendorss.partials.form')
+            @include('vendors::vendors.partials.form')
 
             @slot('footer')
-                {{ BsForm::submit()->label(trans('vendors::vendorss.actions.save')) }}
+                {{ BsForm::submit()->label(trans('vendors::vendors.actions.save')) }}
             @endslot
         @endcomponent
         {{ BsForm::close() }}
