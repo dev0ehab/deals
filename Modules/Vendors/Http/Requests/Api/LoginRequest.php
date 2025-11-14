@@ -45,9 +45,9 @@ class LoginRequest extends FormRequest
     public function attributes(): array
     {
         return array_merge(
-            trans('vendors::vendorsattributes'),
+            trans('vendors::vendorss.attributes'),
             [
-                "username" => trans("vendors::vendorsattributes.$this->username_type"),
+                "username" => trans("vendors::vendorss.attributes.$this->username_type"),
             ]
         );
     }

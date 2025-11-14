@@ -12,21 +12,21 @@
             <div class="modal-content">
                 <div class="modal-header">
                     <h5 class="modal-title"
-                        id="modal-title-{{ $vendor->id }}">@lang('vendors::vendorsdialogs.force.title')</h5>
+                        id="modal-title-{{ $vendor->id }}">@lang('vendors::vendorss.dialogs.force.title')</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
                 <div class="modal-body">
-                    @lang('vendors::vendorsdialogs.force.info')
+                    @lang('vendors::vendorss.dialogs.force.info')
                 </div>
                 <div class="modal-footer">
                     {{ BsForm::get(route('dashboard.vendors.forceDelete', $vendor)) }}
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">
-                        @lang('vendors::vendorsdialogs.force.cancel')
+                        @lang('vendors::vendorss.dialogs.force.cancel')
                     </button>
                     <button type="submit" class="btn btn-danger">
-                        @lang('vendors::vendorsdialogs.force.confirm')
+                        @lang('vendors::vendorss.dialogs.force.confirm')
                     </button>
                     {{ BsForm::close() }}
                 </div>

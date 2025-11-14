@@ -1,41 +1,41 @@
 @extends('dashboard::layouts.default')
 
 @section('title')
-    @lang('vendors::vendorsplural')
+    @lang('vendors::vendorss.plural')
 @endsection
 
 @section('content')
 
     @component('dashboard::layouts.components.page')
-        @slot('title', trans('vendors::vendorsplural'))
+        @slot('title', trans('vendors::vendorss.plural'))
 
         @slot('breadcrumbs', ['dashboard.vendors.index'])
 
-        @include('vendors::vendorspartials.filter')
+        @include('vendors::vendorss.partials.filter')
 
         @component('dashboard::layouts.components.table-box')
-            @slot('title', trans('vendors::vendorsactions.list'))
+            @slot('title', trans('vendors::vendorss.actions.list'))
 
             @slot('tools')
-            @include('vendors::vendorspartials.actions.create')
-            @include('vendors::vendorspartials.actions.trashed')
+            @include('vendors::vendorss.partials.actions.create')
+            @include('vendors::vendorss.partials.actions.trashed')
             <!-- Bulk Actions Toolbar -->
             <div id="bulk-actions-toolbar" class="d-none">
                 <button type="button" class="btn btn-warning" id="bulk-block-btn">
                     <i class="fas fa-ban mr-2"></i>
-                    {{ __('vendors::vendorsbulk-block') }}
+                    {{ __('vendors::vendorss.bulk-block') }}
                 </button>
                 <button type="button" class="btn btn-success ml-2" id="bulk-unblock-btn">
                     <i class="fas fa-check-circle mr-2"></i>
-                    {{ __('vendors::vendorsbulk-unblock') }}
+                    {{ __('vendors::vendorss.bulk-unblock') }}
                 </button>
                 <button type="button" class="btn btn-danger ml-2" id="bulk-delete-btn">
                     <i class="fas fa-trash mr-2"></i>
-                    {{ __('vendors::vendorsbulk-delete') }}
+                    {{ __('vendors::vendorss.bulk-delete') }}
                 </button>
                 <button type="button" class="btn btn-secondary ml-2" id="clear-selection-btn">
                     <i class="fas fa-times mr-2"></i>
-                    {{ __('vendors::vendorsclear-selection') }}
+                    {{ __('vendors::vendorss.clear-selection') }}
                 </button>
             </div>
             @endslot
@@ -45,11 +45,11 @@
                     <th style="width: 50px;">
                         <input type="checkbox" id="select-all-vendors" class="form-check-input">
                     </th>
-                    <th>@lang('vendors::vendorsattributes.name')</th>
-                    <th>@lang('vendors::vendorsattributes.phone')</th>
+                    <th>@lang('vendors::vendorss.attributes.name')</th>
+                    <th>@lang('vendors::vendorss.attributes.phone')</th>
                     <th>@lang('companies::companies.singular')</th>
-                    <th>@lang('vendors::vendorsattributes.status')</th>
-                    <th>@lang('vendors::vendorsattributes.blocked')</th>
+                    <th>@lang('vendors::vendorss.attributes.status')</th>
+                    <th>@lang('vendors::vendorss.attributes.blocked')</th>
                     <th>...</th>
                 </tr>
             </thead>
@@ -76,19 +76,19 @@
                         </td>
                         <td>{{ $vendor->phone }}</td>
                         <td>{{ $vendor?->company?->name }}</td>
-                        <td>@include('vendors::vendorspartials.flags.verified')</td>
-                        <td>@include('vendors::vendorspartials.flags.blocked')</td>
+                        <td>@include('vendors::vendorss.partials.flags.verified')</td>
+                        <td>@include('vendors::vendorss.partials.flags.blocked')</td>
 
                         <td>
-                            @include('vendors::vendorspartials.actions.show')
-                            @include('vendors::vendorspartials.actions.edit')
-                            @include('vendors::vendorspartials.actions.delete')
-                            @include('vendors::vendorspartials.actions.block')
+                            @include('vendors::vendorss.partials.actions.show')
+                            @include('vendors::vendorss.partials.actions.edit')
+                            @include('vendors::vendorss.partials.actions.delete')
+                            @include('vendors::vendorss.partials.actions.block')
                         </td>
                     </tr>
                 @empty
                     <tr>
-                        <td colspan="7" class="text-center">@lang('vendors::vendorsempty')</td>
+                        <td colspan="7" class="text-center">@lang('vendors::vendorss.empty')</td>
                     </tr>
                 @endforelse
 
@@ -139,11 +139,11 @@
                     .map(checkbox => checkbox.value);
 
                 if (selectedIds.length === 0) {
-                    alert('{{ __("vendors::vendorsplease-select-items") }}');
+                    alert('{{ __("vendors::vendorss.please-select-items") }}');
                     return;
                 }
 
-                if (confirm('{{ __("vendors::vendorsconfirm-bulk-block") }}'.replace(':count', selectedIds.length))) {
+                if (confirm('{{ __("vendors::vendorss.confirm-bulk-block") }}'.replace(':count', selectedIds.length))) {
                     submitBulkAction('{{ route("dashboard.vendors.bulk-block") }}', selectedIds);
                 }
             });
@@ -154,11 +154,11 @@
                     .map(checkbox => checkbox.value);
 
                 if (selectedIds.length === 0) {
-                    alert('{{ __("vendors::vendorsplease-select-items") }}');
+                    alert('{{ __("vendors::vendorss.please-select-items") }}');
                     return;
                 }
 
-                if (confirm('{{ __("vendors::vendorsconfirm-bulk-unblock") }}'.replace(':count', selectedIds.length))) {
+                if (confirm('{{ __("vendors::vendorss.confirm-bulk-unblock") }}'.replace(':count', selectedIds.length))) {
                     submitBulkAction('{{ route("dashboard.vendors.bulk-unblock") }}', selectedIds);
                 }
             });
@@ -169,11 +169,11 @@
                     .map(checkbox => checkbox.value);
 
                 if (selectedIds.length === 0) {
-                    alert('{{ __("vendors::vendorsplease-select-items") }}');
+                    alert('{{ __("vendors::vendorss.please-select-items") }}');
                     return;
                 }
 
-                if (confirm('{{ __("vendors::vendorsconfirm-bulk-delete") }}'.replace(':count', selectedIds.length))) {
+                if (confirm('{{ __("vendors::vendorss.confirm-bulk-delete") }}'.replace(':count', selectedIds.length))) {
                     submitBulkDelete('{{ route("dashboard.vendors.bulk-delete") }}', selectedIds);
                 }
             });

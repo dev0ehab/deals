@@ -12,21 +12,21 @@
             <div class="modal-content">
                 <div class="modal-header">
                     <h5 class="modal-title"
-                        id="modal-title-{{ $vendor->id }}">@lang('vendors::vendorsdialogs.restore.title')</h5>
+                        id="modal-title-{{ $vendor->id }}">@lang('vendors::vendorss.dialogs.restore.title')</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
                 <div class="modal-body">
-                    @lang('vendors::vendorsdialogs.restore.info')
+                    @lang('vendors::vendorss.dialogs.restore.info')
                 </div>
                 <div class="modal-footer">
                     {{ BsForm::get(route('dashboard.vendors.restore', $vendor)) }}
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">
-                        @lang('vendors::vendorsdialogs.restore.cancel')
+                        @lang('vendors::vendorss.dialogs.restore.cancel')
                     </button>
                     <button type="submit" class="btn btn-success">
-                        @lang('vendors::vendorsdialogs.restore.confirm')
+                        @lang('vendors::vendorss.dialogs.restore.confirm')
                     </button>
                     {{ BsForm::close() }}
                 </div>
