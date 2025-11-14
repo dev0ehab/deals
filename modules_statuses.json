@@ -21,5 +21,6 @@
     "Products": true,
     "Companies": true,
     "Workers": true,
+    "Vendors": true,
     "Sections": true
 }

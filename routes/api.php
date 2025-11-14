@@ -20,7 +20,5 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 
 Route::delete('uploader/media/{media}', 'MediaController@destroy')->name('uploader.media.destroy');
 
-// Test route for page count extraction
-Route::post('/test/page-count', [\App\Http\Controllers\Api\TestUploadController::class, 'testPageCount']);
 
 // Route::post('/test', [\App\Http\Controllers\TestController::class, 'test']);

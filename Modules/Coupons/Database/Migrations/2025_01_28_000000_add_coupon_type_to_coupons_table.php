@@ -14,7 +14,7 @@ class AddCouponTypeToCouponsTable extends Migration
     public function up()
     {
         Schema::table('coupons', function (Blueprint $table) {
-            $table->enum('coupon_type', ['fixed', 'percent'])->default('percent')->after('discount_type');
+            $table->enum('coupon_type', ['fixed', 'percent'])->default('percent');
         });
     }
 

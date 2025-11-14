@@ -22,11 +22,10 @@ class CreateProductsTable extends Migration
             $table->boolean('is_active')->default(true);
             $table->unsignedBigInteger('rank')->nullable();
             $table->decimal('rate', 10, 2)->nullable();
-            $table->boolean('is_active')->default(false);
             $table->softDeletes();
             $table->timestamps();
         });
-    }   
+    }
 
     /**
      * Reverse the migrations.

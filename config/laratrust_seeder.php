@@ -16,6 +16,7 @@ return [
             'roles'          => 'c,r,u,d,s',
             'admins'         => 'c,r,u,d,s,b',
             'users'          => 'c,r,u,d,s,b,rt,re,f',
+            'vendors'        => 'c,r,u,d,s,b,rt,re,f',
             'settings'       => 'c,r,u,d,s',
             'notifications'  => 'c,r,u,d,s',
             'services'       => 'c,r,u,d,s',

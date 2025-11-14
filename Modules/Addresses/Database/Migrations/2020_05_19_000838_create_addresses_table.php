@@ -24,7 +24,7 @@ class CreateAddressesTable extends Migration
             $table->string('street_name');
             $table->string('landmark')->nullable();
             $table->string('area')->nullable();
-            $table->foreignIdFor(Area::class)->nullable()->constrained()->cascadeOnDelete();
+            // $table->foreignIdFor(Area::class)->nullable()->constrained()->cascadeOnDelete();
             $table->string('address')->nullable();
             $table->string('lat');
             $table->string('long');
