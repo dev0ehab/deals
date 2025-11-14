@@ -17,7 +17,7 @@
 
 
 
-<label>{{ __('vendors::vendorss.attributes.avatar') }}</label>
+<label>{{ __('vendors::vendorsattributes.avatar') }}</label>
 @isset($vendor)
     @include('dashboard::layouts.apps.file', [
         'file' => $vendor->getAvatar(),

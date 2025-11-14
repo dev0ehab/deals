@@ -15,11 +15,11 @@
             <table class="table table-middle">
                 <tbody>
                     <tr>
-                        <th>@lang('vendors::vendorss.attributes.name')</th>
+                        <th>@lang('vendors::vendorsattributes.name')</th>
                         <td>{{ $vendor->name }}</td>
                     </tr>
                     <tr>
-                        <th>@lang('vendors::vendorss.attributes.phone')</th>
+                        <th>@lang('vendors::vendorsattributes.phone')</th>
                         <td>{{ $vendor->phone }}</td>
                     </tr>
                     <tr>
@@ -27,7 +27,7 @@
                         <td>{{ $vendor->company->name }}</td>
                     </tr>
                     <tr>
-                        <th>@lang('vendors::vendorss.attributes.avatar')</th>
+                        <th>@lang('vendors::vendorsattributes.avatar')</th>
                         <td>
                             <div class="d-flex align-items-center">
                                 <div class="symbol symbol-70 symbol-sm flex-shrink-0">
@@ -40,9 +40,9 @@
             </table>
 
             @slot('footer')
-                @include('vendors::vendorss.partials.actions.edit')
-                @include('vendors::vendorss.partials.actions.delete')
-                @include('vendors::vendorss.partials.actions.block')
+                @include('vendors::vendorspartials.actions.edit')
+                @include('vendors::vendorspartials.actions.delete')
+                @include('vendors::vendorspartials.actions.block')
             @endslot
         @endcomponent
     @endcomponent

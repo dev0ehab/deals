@@ -4,7 +4,7 @@
            class="btn btn-outline-dark waves-effect waves-light btn-sm"
            data-toggle="modal">
             <i class="fa fa-ban"></i>
-            @lang('vendors::vendorss.actions.block')
+            @lang('vendors::vendorsactions.block')
         </a>
 
 
@@ -15,21 +15,21 @@
                 <div class="modal-content">
                     <div class="modal-header">
                         <h5 class="modal-title"
-                            id="modal-title-{{ $vendor->id }}">@lang('vendors::vendorss.dialogs.block.title')</h5>
+                            id="modal-title-{{ $vendor->id }}">@lang('vendors::vendorsdialogs.block.title')</h5>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
                     </div>
                     <div class="modal-body">
-                        @lang('vendors::vendorss.dialogs.block.info')
+                        @lang('vendors::vendorsdialogs.block.info')
                     </div>
                     <div class="modal-footer">
                         {{ BsForm::patch(route('dashboard.vendors.block', $vendor)) }}
                         <button type="button" class="btn btn-secondary" data-dismiss="modal">
-                            @lang('vendors::vendorss.dialogs.block.cancel')
+                            @lang('vendors::vendorsdialogs.block.cancel')
                         </button>
                         <button type="submit" class="btn btn-danger">
-                            @lang('vendors::vendorss.dialogs.block.confirm')
+                            @lang('vendors::vendorsdialogs.block.confirm')
                         </button>
                         {{ BsForm::close() }}
                     </div>
@@ -41,7 +41,7 @@
            class="btn btn-outline-dark waves-effect waves-light btn-sm"
            data-toggle="modal">
             <i class="fa fa-check"></i>
-            @lang('vendors::vendorss.actions.unblock')
+            @lang('vendors::vendorsactions.unblock')
         </a>
 
 
@@ -52,21 +52,21 @@
                 <div class="modal-content">
                     <div class="modal-header">
                         <h5 class="modal-title"
-                            id="modal-title-{{ $vendor->id }}">@lang('vendors::vendorss.dialogs.unblock.title')</h5>
+                            id="modal-title-{{ $vendor->id }}">@lang('vendors::vendorsdialogs.unblock.title')</h5>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
                     </div>
                     <div class="modal-body">
-                        @lang('vendors::vendorss.dialogs.unblock.info')
+                        @lang('vendors::vendorsdialogs.unblock.info')
                     </div>
                     <div class="modal-footer">
                         {{ BsForm::patch(route('dashboard.vendors.unblock', $vendor)) }}
                         <button type="button" class="btn btn-secondary" data-dismiss="modal">
-                            @lang('vendors::vendorss.dialogs.unblock.cancel')
+                            @lang('vendors::vendorsdialogs.unblock.cancel')
                         </button>
                         <button type="submit" class="btn btn-danger">
-                            @lang('vendors::vendorss.dialogs.unblock.confirm')
+                            @lang('vendors::vendorsdialogs.unblock.confirm')
                         </button>
                         {{ BsForm::close() }}
                     </div>
