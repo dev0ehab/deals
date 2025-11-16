@@ -30,7 +30,7 @@ class ContactUs extends Model
 
     public function getEmailAttribute($value)
     {
-        return strtolower($value);
+        return strtolower($value) ?? "--";
     }
 
     public function getMessageAttribute($value)

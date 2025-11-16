@@ -12,15 +12,8 @@ git pull origin main
 git add .
 git commit -m "server update"
 
-# php artisan table:drop contact_us
-# php artisan table:drop file_attributes
-# php artisan table:drop order_files
-# php artisan table:drop order_product_features
-# php artisan table:drop order_products
-# php artisan table:drop orders
-# php artisan table:drop addresses
-# php artisan roles:refresh
-# php artisan migrate
+php artisan table:drop contact_us
+php artisan migrate
 
 
 
