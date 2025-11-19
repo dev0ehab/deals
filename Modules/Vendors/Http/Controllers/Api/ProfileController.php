@@ -21,10 +21,7 @@ class ProfileController extends Controller
 {
     use AuthorizesRequests, ValidatesRequests, ApiTrait;
 
-    public function __construct()
-    {
-        $this->middleware('isVendor');
-    }
+
 
     /**
      * Display the authenticated vendor resource.

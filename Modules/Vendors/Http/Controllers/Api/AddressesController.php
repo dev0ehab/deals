@@ -16,11 +16,6 @@ class AddressesController extends Controller
 {
     use AuthorizesRequests, ValidatesRequests, ApiTrait;
 
-    public function __construct()
-    {
-        $this->middleware('isVendor');
-    }
-
     public function index()
     {
         $addresses = auth()->user()->addresses;
