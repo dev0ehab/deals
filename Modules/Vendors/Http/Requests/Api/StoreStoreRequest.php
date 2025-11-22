@@ -49,9 +49,9 @@ class StoreStoreRequest extends FormRequest
                 $validator->errors()->add('is_accepted', __('vendors::vendors.messages.store_already_accepted'));
             }
 
-            if ($this->user()->is_accepted === false) {
-                $validator->errors()->add('is_accepted', __('vendors::vendors.messages.store_not_accepted'));
-            }
+            // if ($this->user()->is_accepted === false) {
+            //     $validator->errors()->add('is_accepted', __('vendors::vendors.messages.store_not_accepted'));
+            // }
 
 
             if (is_null($this->user()->is_accepted) && $this->user()->store_name) {
