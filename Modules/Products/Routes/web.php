@@ -15,5 +15,4 @@
 Route::middleware('dashboard')->prefix('dashboard')->as('dashboard.')->group(function () {
     Route::post('/products/active/{product}', 'ProductsController@activate');
     Route::resource('products', 'ProductsController');
-    Route::resource('products.features', 'ProductFeatureController')->except(['index', 'show']);
 });

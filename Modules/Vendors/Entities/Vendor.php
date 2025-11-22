@@ -14,6 +14,7 @@ use Modules\Vendors\Entities\Helpers\VendorHelpers;
 use Modules\Vendors\Entities\Relations\VendorRelations;
 use Modules\Vendors\Entities\Scopes\VendorScopes;
 use Spatie\MediaLibrary\InteractsWithMedia;
+use Modules\Support\Traits\MediaTrait;
 
 class Vendor extends Authenticatable implements HasMedia, HasLocalePreference
 {
@@ -25,6 +26,7 @@ class Vendor extends Authenticatable implements HasMedia, HasLocalePreference
         InteractsWithMedia,
         Filterable,
         SoftDeletes,
+        MediaTrait,
         HasFactory;
 
     /**
@@ -48,6 +50,11 @@ class Vendor extends Authenticatable implements HasMedia, HasLocalePreference
         'location',
         'lat',
         'long',
+        'store_name',
+        'store_description_ar',
+        'store_description_en',
+        'is_accepted',
+        'rejection_reason',
         'balance',
         'order_notification',
         'facebook_id',
@@ -106,5 +113,21 @@ class Vendor extends Authenticatable implements HasMedia, HasLocalePreference
         $this->addMediaCollection('avatars')
         ->useFallbackUrl('https://www.gravatar.com/avatar/' . md5($this->email) . '?d=mm')
             ->singleFile();
+
+        $this->addMediaCollection('logos')
+            ->singleFile();
+
+        $this->addMediaCollection('banners');
+    }
+
+
+    public function getLogoAttribute()
+    {
+        return $this->getFirstMediaUrl('logos');
+    }
+
+    public function getBannersAttribute()
+    {
+        return $this->getMediaResource('banners');
     }
 }

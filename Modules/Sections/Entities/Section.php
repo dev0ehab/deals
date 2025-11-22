@@ -10,6 +10,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Spatie\MediaLibrary\HasMedia;
 use Spatie\MediaLibrary\InteractsWithMedia;
 use Modules\Products\Entities\Product;
+use Modules\Vendors\Entities\Vendor;
 
 class Section extends Model implements HasMedia
 {
@@ -43,7 +44,7 @@ class Section extends Model implements HasMedia
     {
         return $this->getFirstMediaUrl('images');
     }
-    
+
     public function getImage()
     {
         return $this->getFirstMediaUrl('images');
@@ -53,5 +54,14 @@ class Section extends Model implements HasMedia
     public function products()
     {
         return $this->hasMany(Product::class);
+    }
+
+    /**
+     * Get the vendors that belong to the section.
+     */
+    public function vendors()
+    {
+        return $this->belongsToMany(Vendor::class, 'vendor_section', 'section_id', 'vendor_id')
+            ->withTimestamps();
     }
 }

@@ -10,8 +10,8 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Modules\Orders\Entities\Order;
 use Modules\Orders\Entities\OrderProduct;
-use Modules\Products\Entities\ProductFeature;
 use Modules\Sections\Entities\Section;
+use Modules\Vendors\Entities\Vendor;
 use Modules\Support\Traits\MediaTrait;
 use Modules\Support\Traits\Selectable;
 use Spatie\MediaLibrary\HasMedia;
@@ -28,19 +28,23 @@ class Product extends Model implements HasMedia
         InteractsWithMedia;
 
     protected $fillable = [
-        'price',
+        'price',  // if discount_type is fixed or offer
         'old_price',
         'stock',
+        'product_type',   // new , preorder
+        'discount_type',   // none , fixed , offer
+        'offer_end_date',
         'section_id',
+        'vendor_id',
         'rank',
-        'is_active',
         'rate',
+        'is_active',
     ];
 
 
     protected $table = 'products';
 
-    public $translatedAttributes = ['name', 'description'];
+    public $translatedAttributes = ['name', 'description', 'specifications'];
 
     /**
      * The relations to eager load on every query.
@@ -90,11 +94,21 @@ class Product extends Model implements HasMedia
         return $this->belongsTo(Section::class);
     }
 
+    /**
+     * Get the vendor that owns the Product
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
+     */
+    public function vendor(): BelongsTo
+    {
+        return $this->belongsTo(Vendor::class);
+    }
+
 
     public function orders()
     {
         return $this->belongsToMany(Order::class, 'order_products')
-                    ->withPivot('quantity', 'price','total');
+            ->withPivot('quantity', 'price', 'total');
     }
 
 
@@ -106,11 +120,6 @@ class Product extends Model implements HasMedia
     public function scopeActive($query)
     {
         return $query->where('is_active', 1);
-    }
-
-    public function features()
-    {
-        return $this->hasMany(ProductFeature::class);
     }
 
     public function orderProducts()

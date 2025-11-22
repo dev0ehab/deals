@@ -4,7 +4,6 @@ namespace Modules\Products\Transformers;
 
 use Illuminate\Http\Resources\Json\JsonResource;
 use Modules\Products\Entities\Product;
-use Modules\Products\Transformers\ProductFeaturesResource;
 use Modules\Sections\Transformers\SectionsResource;
 
 class ProductDetailsResource extends JsonResource
@@ -26,7 +25,6 @@ class ProductDetailsResource extends JsonResource
             'images'           => $this->images->pluck('url')->toArray(),
             'price'            => (float) $this->price,
             'old_price'        => $this->old_price ? (float) $this->old_price : null,
-            'features'         => ProductFeaturesResource::collection($this->whenLoaded("features")),
             'section'          => new SectionsResource($this->whenLoaded("section")),
             'stock'            => (int) $this->stock,
             'rate'             => (int) $this->rate,

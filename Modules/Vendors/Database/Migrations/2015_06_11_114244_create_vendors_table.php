@@ -37,6 +37,11 @@ class CreateVendorsTable extends Migration
             $table->string('facebook_id')->unique()->nullable();
             $table->string('google_id')->unique()->nullable();
             $table->string('apple_id')->unique()->nullable();
+            $table->string('store_name')->nullable();
+            $table->text('store_description_ar')->nullable();
+            $table->text('store_description_en')->nullable();
+            $table->boolean('is_accepted')->default(false);
+            $table->text('rejection_reason')->nullable();
             $table->softDeletes();
             $table->timestamps();
         });

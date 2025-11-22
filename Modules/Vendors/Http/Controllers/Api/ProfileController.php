@@ -11,9 +11,13 @@ use Illuminate\Routing\Controller;
 use Modules\Vendors\Entities\Vendor;
 use Modules\Accounts\Entities\Verification;
 use Modules\Accounts\Events\VerificationCreated;
+use Modules\Vendors\Http\Requests\Api\AcceptVendorRequest;
 use Modules\Vendors\Http\Requests\Api\AuthenticableRequest;
 use Modules\Vendors\Http\Requests\Api\PasswordUpdateRequest;
 use Modules\Vendors\Http\Requests\Api\ProfileRequest;
+use Modules\Vendors\Http\Requests\Api\RejectVendorRequest;
+use Modules\Vendors\Http\Requests\Api\StoreStoreRequest;
+use Modules\Vendors\Http\Requests\Api\UpdateStoreRequest;
 use Modules\Vendors\Http\Requests\Api\VerifyAuthenticableRequest;
 use Modules\Support\Traits\ApiTrait;
 
@@ -222,5 +226,113 @@ class ProfileController extends Controller
         $vendor->update($request->only('device_token', "order_notification"));
         $data = $vendor->getResource();
         return $this->sendResponse($data, 'success');
+    }
+
+
+
+
+    /**
+     * Store the authenticated vendor store data (initial creation).
+     *
+     * @param StoreStoreRequest $request
+     * @return JsonResponse
+     */
+    public function storeStore(StoreStoreRequest $request)
+    {
+        $vendor = auth()->user();
+
+        $vendor->update($request->validated());
+
+        $vendor->sections()->sync($request->sections);
+
+        $vendor->load('sections');
+
+
+        if ($request->has('logo')) {
+            $vendor->clearMediaCollection('logos');
+            $vendor->addMediaFromRequest('logo')->toMediaCollection('logos');
+        }
+
+        if ($request->has('banners')) {
+            $vendor->clearMediaCollection('banners');
+            foreach ($request->banners as $banner) {
+                $vendor->addMedia($banner)->toMediaCollection('banners');
+            }
+        }
+
+
+        $data = $vendor->getResource();
+        return $this->sendResponse($data, trans('vendors::vendors.messages.store_created'));
+    }
+
+    /**
+     * Update the authenticated vendor store data.
+     *
+     * @param UpdateStoreRequest $request
+     * @return JsonResponse
+     */
+    public function updateStore(UpdateStoreRequest $request)
+    {
+        $vendor = auth()->user();
+
+        $vendor->update($request->validated());
+        if ($request->has('sections')) {
+            $vendor->sections()->sync($request->sections);
+        }
+
+        if ($request->has('logo')) {
+            $vendor->clearMediaCollection('logos');
+            $vendor->addMedia($request->logo)->usingFileName('logo.png')->toMediaCollection('logos');
+        }
+
+        if ($request->has('banners')) {
+            $vendor->clearMediaCollection('banners');
+            foreach ($request->banners as $banner) {
+                $vendor->addMedia($banner)->toMediaCollection('banners');
+            }
+        }
+
+        $vendor->load('sections');
+
+        $data = $vendor->getResource();
+        return $this->sendResponse($data, trans('vendors::vendors.messages.store_updated'));
+    }
+
+
+    public function accept(Request $request): JsonResponse
+    {
+        $vendor = auth()->user();
+
+        if (!$vendor) {
+            return $this->sendError(trans('vendors::vendors.messages.vendor_not_found'));
+        }
+
+        $vendor->update([
+            'is_accepted'      => true,
+            'rejection_reason' => null,
+        ]);
+
+        $data = $vendor->getResource();
+        return $this->sendResponse($data, trans('vendors::vendors.messages.accepted'));
+    }
+
+    public function reject(Request $request): JsonResponse
+    {
+        $vendor = auth()->user();
+
+        if (!$vendor) {
+            return $this->sendError(trans('vendors::vendors.messages.vendor_not_found'));
+        }
+
+        $vendor->update([
+            'store_name'           => null,
+            'store_description_ar' => null,
+            'store_description_en' => null,
+            'is_accepted'          => false,
+            'rejection_reason'     => $request->rejection_reason,
+        ]);
+
+        $data = $vendor->getResource();
+        return $this->sendResponse($data, trans('vendors::vendors.messages.rejected'));
     }
 }

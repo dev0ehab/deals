@@ -82,7 +82,6 @@ class ProductsController extends Controller
     public function show(Product $product)
     {
         $product = $this->repository->find($product);
-        $product->load(['features.feature', 'features.featureOptions']);
 
         return view('products::products.show', compact('product'));
     }

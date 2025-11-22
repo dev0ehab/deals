@@ -44,6 +44,10 @@ Route::prefix("vendor")->group(function () {
             Route::get('exist', 'Api\ProfileController@exist')->name('vendor.exist');
             Route::post('preferred-locale', 'Api\ProfileController@preferredLocale')->name('vendor.preferred.locale');
             Route::post('fcm', 'Api\ProfileController@updateFcm');
+            Route::post('store', 'Api\ProfileController@storeStore')->name('vendor.store.store');
+            Route::post('store/update', 'Api\ProfileController@updateStore')->name('vendor.store.update');
+            Route::post('store/accept', 'Api\ProfileController@accept')->name('vendor.accept');
+            Route::post('store/reject', 'Api\ProfileController@reject')->name('vendor.reject');
 
             Route::post('logout', 'Api\ProfileController@logout')->name('vendor.logout');
 
@@ -54,6 +58,9 @@ Route::prefix("vendor")->group(function () {
             // vendor's Addresses
             Route::get('addresses/check', 'Api\AddressesController@check')->name('vendor.addresses.check');
             Route::apiResource('addresses', 'Api\AddressesController');
+
+            // vendor's Products
+            Route::apiResource('products', 'Api\ProductsController');
         }
     );
 });
